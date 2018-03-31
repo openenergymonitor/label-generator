@@ -22,13 +22,13 @@ GENERATED="output.pdf"
 TEMPLATE="openevse.glabels"
 
 # Default Printer
-PRINTER="Kyocera FS-C5150DN"
+PRINTER="Server_Kyocera_FS-C5150DN"
 
 ##############################################################
 echo -e "\nOpenEnegyMonitor label generator V1.0\n"
 > serial.csv
 
-echo -e "Generating random strings...:\n"
+echo -e "Generating random strings...\n"
 for (( i=1; i<=$QTY; i++))
 	do
     STR=$(tr -dc a-f0-9 < /dev/urandom | dd bs=$CHARACTERS count=1 2> /dev/null)
@@ -38,10 +38,10 @@ for (( i=1; i<=$QTY; i++))
 cat $SERIAL
 
 if [ "$1" != "" ]; then
-    echo -e "\nGenerating labels using $1 template\n"
+    echo -e "\nGenerating labels using $1 template...\n"
     glabels-3-batch --input=$SERIAL $1
 else
-    echo -e "\nGenerating labels using $TEMPLATE template\n"
+    echo -e "\nGenerating labels using $TEMPLATE template...\n"
     glabels-3-batch --input=$SERIAL $TEMPLATE
 fi
 
@@ -52,11 +52,5 @@ if [ "$2" != "" ]; then
     lpr -P $2
 else
     read -p "$GENERATED generated press Enter to print on $PRINTER or [CTRL+C] to exit"
-    lpr -P $PRINTER $GENERATED
+    lpr -P $PRINTER $GENERATED -o KCEcoprint=Off -o MediaType=Transparency
 fi
-
-
-
-
-
-
