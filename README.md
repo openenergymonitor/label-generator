@@ -2,7 +2,7 @@
 
 Random string serial ID label barcode generator using Glabels
 
-Random code gnerated from `/dev/urandom`
+Random string gnerated from `/dev/urandom`
 
 ## Requirements
 
