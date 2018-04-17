@@ -39,10 +39,10 @@ cat $SERIAL
 
 if [ "$1" != "" ]; then
     echo -e "\nGenerating labels using $1.glabels template...\n"
-    glabels-3-batch --input=$SERIAL $1
+    glabels-3-batch --input=$SERIAL $1.glabels
 else
     echo -e "\nGenerating labels using $TEMPLATE.glabels template...\n"
-    glabels-3-batch --input=$SERIAL $TEMPLATE
+    glabels-3-batch --input=$SERIAL $TEMPLATE.glabels
 fi
 
 echo
