@@ -23,6 +23,7 @@ TEMPLATE="emonevse-dataplate"
 
 # Default Printer
 PRINTER="Server_Kyocera_FS-C5150DN"
+OPTIONS="-o KCEcoprint=Off -o MediaType=Transparency"
 
 ##############################################################
 echo -e "\nOpenEnegyMonitor label generator V1.0\n"
@@ -51,6 +52,6 @@ if [ "$2" != "" ]; then
     read -p "$GENERATED generated press Enter to print on $2 or [CTRL+C] to exit"
     lpr -P $2
 else
-    read -p "$GENERATED generated press Enter to print on $PRINTER or [CTRL+C] to exit"
-    lpr -P $PRINTER $GENERATED -o KCEcoprint=Off -o MediaType=Transparency
+    read -p "$GENERATED generated press Enter to print on $PRINTER with options $OPTIONS or [CTRL+C] to exit"
+    lpr -P $PRINTER $GENERATED $OPTIONS
 fi
