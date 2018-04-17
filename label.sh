@@ -19,7 +19,7 @@ SERIAL="serial.csv"
 GENERATED="output.pdf"
 
 # Default glables template
-TEMPLATE="openevse.glabels"
+TEMPLATE="openevse-dataplate.glabels"
 
 # Default Printer
 PRINTER="Server_Kyocera_FS-C5150DN"
