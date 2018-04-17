@@ -19,7 +19,7 @@ SERIAL="serial.csv"
 GENERATED="output.pdf"
 
 # Default glables template
-TEMPLATE="openevse-dataplate.glabels"
+TEMPLATE="openevse-dataplate"
 
 # Default Printer
 PRINTER="Server_Kyocera_FS-C5150DN"
@@ -38,10 +38,10 @@ for (( i=1; i<=$QTY; i++))
 cat $SERIAL
 
 if [ "$1" != "" ]; then
-    echo -e "\nGenerating labels using $1 template...\n"
+    echo -e "\nGenerating labels using $1.glabels template...\n"
     glabels-3-batch --input=$SERIAL $1
 else
-    echo -e "\nGenerating labels using $TEMPLATE template...\n"
+    echo -e "\nGenerating labels using $TEMPLATE.glabels template...\n"
     glabels-3-batch --input=$SERIAL $TEMPLATE
 fi
 
