@@ -2,7 +2,7 @@
 
 
 # Default Printer
-PRINTER="Server_Kyocera_FS-C5150DN"
+PRINTER="pi-Kyocera_FS-C5150DN"
 OPTIONS="-o KCEcoprint=Off -o MediaType=Transparency -o ColorModel=CMYK"
 
 
