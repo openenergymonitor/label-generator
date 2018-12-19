@@ -3,7 +3,7 @@
 
 # Default Printer
 PRINTER="pi-Kyocera_FS-C5150DN"
-OPTIONS="-o KCEcoprint=Off -o MediaType=Transparency -o ColorModel=CMYK"
+OPTIONS="-o KCEcoprint=Off -o MediaType=Transparency -o ColorModel=gray -o copies=1"
 
 
 read -p "Printing $1 on $PRINTER with options $OPTIONS press [Enter] to continue or [CTRL+C] to exit"
