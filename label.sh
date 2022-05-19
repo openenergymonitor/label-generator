@@ -19,7 +19,7 @@ SERIAL="serial.csv"
 GENERATED="output.pdf"
 
 # Default glables template
-TEMPLATE="emonevse-dataplate"
+TEMPLATE="emonevse-dataplate.glabels"
 
 # Default Printer
 PRINTER="pi-Kyocera_FS-C5150DN"
@@ -40,10 +40,10 @@ cat $SERIAL
 
 if [ "$1" != "" ]; then
     echo -e "\nGenerating labels using $1.glabels template...\n"
-    glabels-3-batch --input=$SERIAL $1.glabels
+    glabels-3-batch --input=$SERIAL $1
 else
     echo -e "\nGenerating labels using $TEMPLATE.glabels template...\n"
-    glabels-3-batch --input=$SERIAL $TEMPLATE.glabels
+    glabels-3-batch --input=$SERIAL $TEMPLATE
 fi
 
 echo
