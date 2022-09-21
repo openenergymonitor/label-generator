@@ -24,7 +24,7 @@ TEMPLATE="emonevse-dataplate.glabels"
 # Default Printer
 PRINTER="pi-Kyocera_FS-C5150DN"
 OPTIONS="-o KCEcoprint=Off -o MediaType=Transparency"
-
+#OPTIONS="-o KCEcoprint=Off"
 ##############################################################
 echo -e "\nOpenEnegyMonitor label generator V1.0\n"
 > serial.csv
