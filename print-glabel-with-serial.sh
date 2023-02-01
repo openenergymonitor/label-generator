@@ -42,7 +42,7 @@ if [ "$1" != "" ]; then
     echo -e "\nGenerating labels using $1.glabels template...\n"
     glabels-3-batch --input=$SERIAL $1
 else
-    echo -e "\nGenerating labels using $TEMPLATE.glabels template...\n"
+    echo -e "\nGenerating labels using $TEMPLATE template...\n"
     glabels-3-batch --input=$SERIAL $TEMPLATE
 fi
 
