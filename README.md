@@ -23,8 +23,4 @@ Or specify options
 `$ ./label <template.glables> <LPR printer>`
 
  
-Serial numbers will be inserted into field and barcode generated. Automated printing is optional.
-
-## Example
-
-![](example.png)
+Serial numbers will be inserted into field and barcode generated. Automated printing is optional
